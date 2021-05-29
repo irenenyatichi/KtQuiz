@@ -1,5 +1,5 @@
 fun main() {
-    val read= mutableListOf<Book>(Book("How to","Brian",96),(Book("Kids Life", "Lisa", 30)),(Book("Tech", "Geek", 765)))
+    val read= mutableListOf(Book("How to","Brian",96),(Book("Kids Life", "Lisa", 30)),(Book("Tech", "Geek", 765)))
     println(read)
     val account= CurrentAccount("1234567","Irene",456000.00)
     account.deposit(20000.00)
@@ -12,8 +12,8 @@ fun main() {
 
 data class Book(var title:String, var author:String, var pages:Int)
 
-fun book(y: List<Book>): List<Book> {
-    return y.sortedByDescending { book -> book.title }
+fun book(a: List<Book>): List<Book> {
+    return a.sortedByDescending { book -> book.title }
 }
 
 open class CurrentAccount(var accountNumber:String,var accountName:String ,var balance:Double){
